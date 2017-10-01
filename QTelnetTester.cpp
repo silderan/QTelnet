@@ -10,6 +10,7 @@ QTelnetTester::QTelnetTester(QWidget *parent) :
 	ui->leAddr->setText("10.50.0.3");
 	connect( &telnet, SIGNAL(newData(const char*,int)), this, SLOT(addText(const char*,int)) );
 	connect( &telnet, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(onStateChanged(QAbstractSocket::SocketState)) );
+	connect( ui->cbCmd, SIGNAL(command(QString)), this, SLOT(onCommand(QString)));
 }
 
 QTelnetTester::~QTelnetTester()
@@ -66,13 +67,11 @@ void QTelnetTester::setStatusText(const QString &msg, bool onQTelnetTester)
 	ui->statusBar->showMessage(msg);
 }
 
-void QTelnetTester::on_pbSend_clicked()
+void QTelnetTester::onCommand(const QString &cmd)
 {
 	if( telnet.isConnected() )
 	{
-		ui->cbCmd->lineEdit()->selectAll();
-		if( ui->cbCmd->currentText().length() )
-			telnet.sendData(ui->cbCmd->currentText().toLatin1());
+		telnet.sendData(cmd.toLatin1());
 		telnet.sendData("\n");
 	}
 }

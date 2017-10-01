@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Fonts">
+        <file>Cella.ttf</file>
+    </qresource>
+</RCC>

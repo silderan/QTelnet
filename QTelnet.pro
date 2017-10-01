@@ -14,9 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         QTelnetTester.cpp \
-    QTelnet.cpp
+    QTelnet.cpp \
+    QCmdWidget.cpp
 
 HEADERS  += QTelnetTester.h \
-    QTelnet.h
+    QTelnet.h \
+    QCmdWidget.h
 
 FORMS    += QTelnetTester.ui
+
+RESOURCES += \
+    resources.qrc

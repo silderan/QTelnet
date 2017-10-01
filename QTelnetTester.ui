@@ -65,23 +65,10 @@
       </property>
      </spacer>
     </item>
-    <item row="4" column="0">
-     <widget class="QComboBox" name="cbCmd">
+    <item row="4" column="0" colspan="2">
+     <widget class="QCmdWidget" name="cbCmd">
       <property name="editable">
        <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="pbSend">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>Send</string>
       </property>
      </widget>
     </item>
@@ -108,6 +95,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCmdWidget</class>
+   <extends>QComboBox</extends>
+   <header>QCmdWidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

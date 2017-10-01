@@ -23,8 +23,8 @@ public:
 private slots:
 	void onStateChanged(QAbstractSocket::SocketState s);
 
-	void on_pbSend_clicked();
 	void on_btConnect_clicked();
+	void onCommand(const QString &cmd);
 
 public slots:
 	void setStatusText(const QString &msg, bool onMainWindow = false);
