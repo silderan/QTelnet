@@ -17,6 +17,11 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0" rowspan="4">
      <widget class="QPlainTextEdit" name="teOutput">
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+       </font>
+      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>

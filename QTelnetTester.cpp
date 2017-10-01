@@ -1,5 +1,6 @@
 #include "QTelnetTester.h"
 #include "ui_QTelnetTester.h"
+#include <QScrollBar>
 
 QTelnetTester::QTelnetTester(QWidget *parent) :
 	QMainWindow(parent),
@@ -87,4 +88,5 @@ void QTelnetTester::on_btConnect_clicked()
 void QTelnetTester::addText(const char *msg, int count)
 {
 	ui->teOutput->insertPlainText( QByteArray(msg, count) );
+	ui->teOutput->verticalScrollBar()->setValue(0xFFFFFFF);
 }
