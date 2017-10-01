@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QTelnetTester</class>
+ <widget class="QMainWindow" name="QTelnetTester">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>682</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QTelnetTester</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" rowspan="4">
+     <widget class="QPlainTextEdit" name="teOutput">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="leAddr">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="sbPort">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>65535</number>
+      </property>
+      <property name="value">
+       <number>23</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="btConnect">
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>347</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="4" column="0">
+     <widget class="QComboBox" name="cbCmd">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pbSend">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Send</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>682</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
