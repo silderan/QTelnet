@@ -14,7 +14,7 @@ it, but you can look at them to understand how to use the library.
 Anyway, it is as easy as using three functions and catching other two:
 
 ### Functions
-  * __`connectToHost(QString host, quint16 port)`__  
+  * **`connectToHost(const QString &host, quint16 port)`**  
     To connect to a host via IP or host name
   * __`disconnectFromHost()`__  
     close connection.
@@ -25,7 +25,7 @@ Anyway, it is as easy as using three functions and catching other two:
     So, you need to decode your text before sending it.
 
 ### Signals
-  __`newData(const char*,int)`__  
+  * __`newData(const char*,int)`__  
     This is invoqued when new data comes from server.
     Beware, if you parse incoming data through code, remember that
     the text NEVER comes at once. Meaning, any text form server could
@@ -33,5 +33,5 @@ Anyway, it is as easy as using three functions and catching other two:
     it until all comes. Yes, it's not easy to know if "all" has come.
     Sadly, I cannot hep you at this because it's up to the server if
     sends "prompt" or not.
-  __`stateChanged(QAbstractSocket::SocketState)`__  
+  * __`stateChanged(QAbstractSocket::SocketState)`__  
     Catch this signal to know socket state changes.
