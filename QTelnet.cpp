@@ -21,7 +21,7 @@ QTelnet::QTelnet(QObject *parent) :
 	connect( this, SIGNAL(readyRead()),		this, SLOT(onReadyRead()) );
 }
 
-QString QTelnet::peerInfo()
+QString QTelnet::peerInfo() const
 {
 	return QString("%1 (%2):%3").arg(peerName()).arg(peerAddress().toString()).arg(peerPort());
 }
@@ -36,7 +36,7 @@ bool QTelnet::testBinaryMode() const
 	return m_receivedDX[(unsigned char)TELOPT_BINARY] == DO;
 }
 
-void QTelnet::connectToHost(QString host, int port)
+void QTelnet::connectToHost(const QString &host, quint16 port)
 {
 	if( !isConnected() )
 	{

@@ -106,7 +106,7 @@ private:
 public:
 	explicit QTelnet(QObject *parent = 0);
 
-	virtual void connectToHost(QString host, int port);
+	virtual void connectToHost(const QString &host, quint16 port);
 	void sendData(const QByteArray &ba);
 	void setCustomCRLF(char lf = 13, char cr = 10);
 	void setCustomCR(char cr = 10, char cr2 = 0);
@@ -121,7 +121,7 @@ public:
 	void setWindSize(QSize s)   {m_winSize = s;}
 	void sendWindowSize();
 
-	QString peerInfo();
+	QString peerInfo()const;
 
 signals:
 	void newData(const char *buff, int len);
