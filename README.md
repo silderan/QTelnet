@@ -5,8 +5,8 @@ This is a very basic telnet client, unblocking and easy to use.
 Takes care of telnet protocol leaving the clean data to the developer.
 
 To create a telnet client you only need QTelnet.h and .cpp files and you to
-include in .pro file the network library:
-`__QT += core gui network__`
+include in .pro file the network library:  
+__`QT += core gui network`__
 
 The rest of files/classes, `QCmdWidget` and `QTelnetTester`, where used by me to develop
 it, but you can look at them to understand how to use the library.
